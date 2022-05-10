@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Complaint Management System</title>
+    <link href="../lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+</head>
+<body data-ng-app="appModule" data-ng-controller="appController">
+    <header class="container-fluid"></header>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                Left
+            </div>
+            <div class="col-md-7">
+                <h2>Assess Interaction</h2>
+                <form class="row">
+                    <h3>Interaction Details</h3>
+                    <div class="form-group col-md-12">
+                        <label for="drpProducts" class="form-label">{{questions[0]}}</label>
+                        <select id="drpProducts" class="form-control">
+                            <option>Select....</option>
+                            <option data-ng-repeat="p in products">
+                                {{p}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="drpProductTypes" class="form-label">{{questions[1]}}</label>
+                        <select id="drpProductTypes" class="form-control">
+                            <option>Select....</option>
+                            <option data-ng-repeat="pt in productTypes">
+                                {{pt}}
+                            </option>
+                        </select>
+                    </div>
+                    <h3>Other Details</h3>
+                    <div class="form-group col-md-6">
+                        <label for="txtInteractionDate" class="form-label">{{questions[3]}}</label>
+                        <input id="txtInteractionDate" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="txtDateReceivedByOrg" class="form-label">{{questions[4]}}</label>
+                        <input id="txtDateReceivedByOrg" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="drpSourceTypes" class="form-label">{{questions[5]}}</label>
+                        <select id="drpSourceTypes" class="form-control">
+                            <option>Select....</option>
+                            <option data-ng-repeat="st in sourceTypes">
+                                {{st}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="drpConfidential" class="form-label">{{questions[6]}}</label>
+                        <select id="drpConfidential" class="form-control">
+                            <option>Select....</option>
+                            <option data-ng-repeat="c in confidentials">
+                                {{c}}
+                            </option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3">
+                Right
+            </div>
+        </div>
+    </section>
+    <footer class="container-fluid"></footer>
+    <script src="../lib/jquery/dist/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="../lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
